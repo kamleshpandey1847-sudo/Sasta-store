@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-android-green: #3DDC84;
+  --color-android-navy: #073042;
+  --color-sasta-orange: #FF5722;
+  --color-sasta-gold: #FFC107;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark,
+body.dark,
+.dark,
+.dark body,
+.dark #root {
+  background-color: #1e293b !important; /* 50% darkness slate-800 */
+  color: #f8fafc;
+}
+
+/* Global 50% darkness mode overrides for background cards, text, and inputs */
+.dark .bg-white {
+  background-color: #283548 !important; /* 50% dark elevated card surface */
+}
+
+.dark .bg-slate-50 {
+  background-color: #1e293b !important; /* 50% dark canvas background */
+}
+
+.dark .bg-slate-100 {
+  background-color: #334155 !important;
+}
+
+.dark .bg-slate-200 {
+  background-color: #475569 !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+.dark .text-slate-700,
+.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.dark .border-slate-100,
+.dark .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark select,
+.dark textarea {
+  background-color: #283548;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748b;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+

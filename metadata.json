@@ -1,0 +1,6 @@
+{
+  "name": "Sasta Store",
+  "description": "An Android-style mobile web marketplace where Creators can list products with multiple images and manage orders, and Users can browse and place orders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
